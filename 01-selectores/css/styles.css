@@ -1,0 +1,129 @@
+/*Secectores basicos de etiquetas*/
+/* body{
+    background: gray;
+}
+h1{
+    color: red;
+    font-size: 50px;
+    text-decoration: underline; linea por debajo del texto
+    text-shadow: 0px 0px 10px black; sombra text-shadow: 0px 0px 10px(difuminado) black
+} */
+/*Secectores basicos de etiquetas*/
+/*----------------------------------------------------------------------------------------------------*/
+
+/* LAS HOJAS DE ESTILO SE LEEN DE ARRIBA ABAJO, EL ULTIMO ESTILO Q PREDOMINE 
+O EL ULTIMO ESTILO Q ESTE PUESTO ES EL Q PREDOMINA SOBRE EL 
+ANTERIOR Y SE QUEDA CON EL ULTIMO*/
+
+/*Selectores*/
+/*Selector universal, permite seleccionar todo el html*/
+ *{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*margin: 0px;/*margen externo*/
+    /*padding: 0px; /*margen interno*/
+ }
+
+/*Selectore  de etiqueta*/
+h1{
+    background: red;
+    color: white;
+    font-size: 50px;
+    padding: 10px;
+    text-decoration: underline; /*linea por debajo del texto*/
+    text-shadow: 0px 0px 10px black; /*sombra text-shadow: 0px 0px 10px(difuminado) black*/
+}
+
+a{
+    font-size: 18px;
+    color: green;
+    text-decoration: none;
+}
+
+footer a{
+    color: green;    
+}
+
+
+/*Selectore  de id */
+#descripcion,#titulo{
+    border: 5px solid black;
+    padding: 15px;
+}
+
+#titulo{
+    background: blue;
+    border: 2px dashed white;
+}
+
+/*Selectore  de clase*/
+.parrafo{
+    font-style: italic;
+    /*text-decoration: underline; /*linea por debajo del texto*/
+    font-weight: bold;
+    padding: 10px;
+}
+
+.parrafo1,.parrafo2{
+    background-color: green;
+    color: white;
+    /* padding: 10px; */
+}
+
+.parrafo2{
+    background-color: orange;
+    color: black;
+}
+
+
+/*Selectore de atributo*/
+#usuario form {
+    border: 5px solid blue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+#usuario form *{
+    display: block; /*cada elemento lo pone en bloque y ocupa 100%*/
+
+}
+
+input[type='text']{
+    margin-bottom: 15px;
+    padding: 5px;
+    width: 300px;
+}
+
+input[type='submit']{
+    background: green;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+
+
+/*Selectores hijos*/
+#menu > li > a{
+    font-size: 18px;
+    color: red;
+    text-decoration: none;
+}
+
+
+/*Prioridad, la ultima regla tiene mas prioridad y reemplaza a la amterior*/
+#saludo h1{
+    background: brown !important;
+}
+
+h1{
+    background: purple !important;
+}
+
+
+
+
+
