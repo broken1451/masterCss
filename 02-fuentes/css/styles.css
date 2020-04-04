@@ -1,18 +1,42 @@
 /* 1em son 16px */
 
+
+/*importar un fuente externa, FUENTES PERSONALIZADAS*/
+@font-face{
+    font-family: OpenSansCondensedCustom;
+    src: url(../fonts/OpenSansCondensed-Bold.ttf);
+}
+
 body{
     background: red;
 }
 
 h1{
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Lobster', cursive;
+    text-transform: uppercase;
     font-style: italic;
+    font-size: 45px;
+
+    /*COLORES*/
+    /*COLORES DEL SISTEMA*/
+    color: mediumpurple;
+
+    /*COLORES HEXADECIMAL*/
+    color: #bb1313;
+
+    /*COLORES RGB, son la combinacion de rojo, verde y azul*/
+    color: rgba(215, 166, 85);
+
+    /*COLORES RGBA, la unica diferencia es la opacidad que es el 4to parametro*/
+    color: rgba(226, 166, 70, 0.349);
 }
 
 h3 {
-    font-family: 'Comic Sans MS', Courier, monospace;
-    font-size: 25px;
+    font-family:OpenSansCondensedCustom ,'Comic Sans MS', Courier, monospace;
+    font-size: 45px;
     font-weight: lighter;
+    color: olive;
 }
 
 
@@ -21,3 +45,5 @@ p{
     font-size: 18px;
     font-weight: bold;
 }
+
+
