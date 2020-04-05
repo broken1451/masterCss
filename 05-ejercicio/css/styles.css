@@ -1,0 +1,184 @@
+/*
+Ejercicio html completo
+
+1. Crear un documento html y vinculada  con un css(hecho)
+2. crear una estructura htm que cuente con un CONTENEDOR GENERAL(hecho)
+   HEADER,MENU ,BARRA LATERAL, SECCION CONTENIDO PRINCIPAL, ELEMENTOS DENTRO DEL CONTENEDOR RPINCIPAL Y UN FOOTER
+
+3.TODO EL CONTENIDO DEBE ESTAR DENTRO DEL CONTENEDOR GENERAL Y SU ANCHO SERA DE 1200PX Y ESTAR CENTRADO(hecha)
+
+4. EL HEADER DEBE OCUPAR EL EL 100% DE  ANCHO Y TENER UN TEXTO GRANDE CENTRADO(hecho)
+
+
+5. MENU DEBE TENER LOS ELEMENTOS UNO AL LADO DEL OTRO (hecho)
+
+
+6. EL CONTENIDO PRINCIPAL DEBE TENERUN ANCHO DEL 70%
+
+7. EL CONTENIDO  DENTRO  DEL CONTENEDOR  PRINCIPAL DEBE SER UNA CUADRICULA CON 4 LINEAS DE DOS VAJAS
+
+
+8. LA BARRA LATERAL DEBE TENER UN ANCHO DEL 30#
+
+9. EL FOOTER DEBE TENER  UN ANCHO 100%  DEL DIV QUE O CONTIENE Y ESTAR ABAJO DEL TODO
+*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#contenedorPrincipal {
+  width: 1200px;
+  border: 1px solid black;
+  margin: 0px auto; /* centrar elementos en mediade la pagina*/
+  margin-top: 20px;
+}
+
+#cabecera {
+  width: 100%;
+  height: 100px;
+  background: blue;
+}
+#cabecera h1 {
+  font-size: 45px;
+  text-align: center;
+  line-height: 90px;
+}
+
+/* 5. MENU DEBE TENER LOS ELEMENTOS UNO AL LADO DEL OTRO  */
+#menu {
+  /* background: orange; */
+  height: 40px;
+  /* border: 1px solid red; */
+}
+
+#menu ul li {
+  /* display: inline-block; */
+  display: block;
+  list-style: none;
+
+  border-right: 1px solid black;
+  float: left;
+}
+
+#menu ul li a {
+  display: block;
+  padding: 10px;
+  color: #444444;
+  list-style: none;
+  margin-left: 3px;
+}
+
+#menu ul li:hover {
+  background: blue;
+  cursor: pointer;
+}
+
+#menu ul li:hover a {
+  color: white;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#contenido {
+  width: 70%;
+  /* background: blue; */
+  float: left;
+}
+
+#barraLateral {
+  float: left;
+  width: 29%;
+  border: 1px solid red;
+  min-height: 500px;
+  max-height: 500px;
+  /* background: blue; */
+  text-align: center;
+  /*overflow: scroll;/*hidden: todo lo q se salga desaparece, visible lo que viene por defecto, scroll: se haga un scroll*/
+  overflow-y: scroll; /*hidden: todo lo q se salga desaparece, visible lo que viene por defecto, scroll: se haga un scroll*/
+}
+
+#contenido .caja {
+  display: block;
+  width: 40%;
+  height: 250px;
+  background: #cccccc;
+  border: 1px solid white;
+  border-radius: 5px 10px 5px 61px; /*se le aplica a todos los elementos de una web, simplemente tiene q 
+                                     ser cajas que se hayan formado con css y luego se aplica para q tengas bordes
+                                     redondos */
+  color: white;
+  margin: 20px;
+  margin-left: 40px;
+  text-align: center;
+  line-height: 250px;
+  color: black;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 2px gray; /*sombra box-shadow: 0px 0px 10px(difuminado) black*/
+  float: left;
+}
+
+#contenido > h1 {
+  text-align: center;
+  border-bottom: 1px solid #cccccc;
+  padding: 15px;
+  text-shadow: 1px 1px 2px #cccccc;
+}
+
+#footer {
+  width: 100%;
+  background: blue;
+  text-align: center;
+  color: white;
+  height: 40px;
+  line-height: 55px;
+  border-top: 1px solid #cccccc;
+}
+
+.sombraInterior {
+  box-shadow: 0px 15px 15px gray inset !important; /* inset es por dentro*/
+}
+
+.libre {
+  /*La posicion relative es la q viene por defecto*/
+  position: absolute; /*esta propiedad va por encima de todo, posicion absoluta no acompana al scroll 
+                         y se queda posicionado en un punto y la fija acompana al scroll y siempre esta visible*/
+  top: 300px;
+  /* left: 50%; */
+  right: 50%;
+  border: 1px solid black;
+  background-color: red;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 13px;
+}
+
+.libre1 {
+  z-index: 78;
+}
+
+.libre2 {
+  background-color: green;
+  top: 265px;
+  z-index: 30;
+}
+
+.fija {
+  /*La posicion relative es la q viene por defecto*/
+  position: fixed; /*esta propiedad va por encima de todo,posicion absoluta no acompana al scroll 
+                    y se queda posicionado en un punto y la fija acompana al scroll y siempre esta visible*/
+  top: 50%;
+  left: 0%;
+  border: 1px solid black;
+  background-color: blue;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 13px;
+}
