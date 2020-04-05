@@ -1,0 +1,69 @@
+#boton {
+  display: block;
+  padding: 20px;
+  background-color: green;
+  color: white;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  border: 1px solid red;
+  /* transition: all 500ms; transcicion a todas las propiedades css */
+}
+
+#boton:hover {
+  transition: border 500ms, background 3s, border-radius 1s; /* a las propiedades q quiero*/
+  border-radius: 15px;
+  background-color: orangered;
+  border: 4px solid purple;
+}
+
+#caja {
+  width: 250px;
+  height: 250px;
+  background: purple;
+  color: white;
+  border: 5px solid black;
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 250px;
+  animation-name: desplazamiento;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* @keyframes nombredelaanimacion {} */
+/* 
+@keyframes desplazamiento {
+  form {
+    margin-left: 0px;
+  }
+  to{
+    margin-left: 1200px;
+  }
+} */
+
+@keyframes desplazamiento {
+  0% {
+    margin-left: 0px;
+    transform: rotate(0deg);
+  }
+  50% {
+    margin-left: 1200px;
+    transform: rotate(360deg);
+    border-radius: 999px;
+  }
+  75% {
+    background: red;
+  }
+  77%{
+   border: 5px dashed blue;
+  }
+  100% {
+    margin-left: 0px;
+    transform: rotate(0deg);
+  }
+}

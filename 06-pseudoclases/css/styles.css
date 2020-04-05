@@ -1,0 +1,64 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+ul li {
+  font-size: 20px;
+}
+
+ul li:first-child {
+  color: purple;
+  font-weight: bold;
+}
+
+ul li:nth-child(3) {
+  color: yellow;
+  font-weight: bold;
+}
+
+ul li:nth-last-child(3) {
+  color: red;
+  font-weight: bold;
+}
+
+ul li:last-child {
+  color: orange;
+  font-weight: bold;
+}
+
+#enlace {
+  font-size: 30px;
+  color: salmon;
+}
+
+#enlace:link {
+  /*cuando no esta visitado este enlace*/
+  color: red;
+}
+
+#enlace:visited {
+  /*cuando  esta visitado este enlace*/
+  color: orangered;
+}
+
+#enlace:hover {
+  /*cuando pasa por encima el raton*/
+  color: black;
+}
+
+#enlace:active {
+  /*cuando se este pulsando*/
+  color: purple;
+  font-family: "Courier New", Courier, monospace;
+}
+
+input[type="text"] {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+input[type="text"]:focus {
+  border: 5px dashed red;
+}
+
