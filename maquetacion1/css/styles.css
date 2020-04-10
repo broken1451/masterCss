@@ -9,6 +9,25 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "fajala";
+  src: url(../css/fonts/FjallaOne-Regular.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "icons";
+  src: url(../css/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular)
+      format("svg"),
+    url(fonts/websymbols-regular-webfont.eot);
+  src: url(../css/fonts/websymbols-regular-webfont.eot?#iefix)
+      format("embedded-opentype"),
+    url(../css/fonts/websymbols-regular-webfont.woff) format("woff"),
+    url(../css/fonts/websymbols-regular-webfont.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 /*Estilos generales*/
 * {
@@ -39,6 +58,22 @@ a:visited {
 
 .blue {
   color: #0c73f2 !important;
+}
+
+.orange {
+  color: #d69d2a;
+}
+
+.icono {
+  font-family: "icons";
+  float: left;
+  margin-right: 5px;
+  margin-top: -1px;
+}
+
+.clearfix {
+  float: none;
+  clear: both;
 }
 
 /*Formularios*/
@@ -215,6 +250,7 @@ button:active {
   width: 1250px;
   min-width: 1100px;
   margin: 0px auto;
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
 }
 
 /*Barra lateral*/
@@ -228,7 +264,7 @@ button:active {
   border: 1px solid #ccc;
   box-shadow: 0px 2px 4px #ccc;
   font-family: sans-serif, Arial, Helvetica, sans-serif;
-  clear: both;
+  /* clear: both; */
 }
 
 #frase {
@@ -236,6 +272,7 @@ button:active {
   padding: 10px;
   font-size: 14px;
   font-family: sans-serif, Arial, Helvetica, sans-serif;
+  /* clear: both; */
 }
 
 #aside .widget {
@@ -297,4 +334,78 @@ button {
 #aside label {
   margin: 0px auto;
   text-align: center;
+}
+
+/*Secciones*/
+#sections {
+  float: right;
+  width: 75%;
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+  margin-right: 20px;
+}
+
+#sections .titulo {
+  font-family: "fajala";
+  font-size: 25px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: -20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+#sections section {
+  margin-top: 40px;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 4px #c9c9c9;
+  color: #333333;
+  font-size: 16px;
+  overflow: hidden; /* todo lo q se salga de las secciones que se oculte*/
+}
+
+#sections .article {
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#sections .date {
+  color: gray;
+  font-size: 14px;
+}
+
+#sections .stiker1,
+#sections .stiker2 {
+  position: absolute;
+  margin-top: -38px;
+  z-index: 0;
+}
+
+#sections .stiker2 {
+  margin-left: 860px;
+}
+
+#history {
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+/*Footer*/
+#footer {
+  width: 100%;
+  margin: 0px auto;
+  text-align: center;
+  margin-top: 40px;
+  background-color: #333333;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+  box-shadow: 0px 0px 2px gray;
 }
