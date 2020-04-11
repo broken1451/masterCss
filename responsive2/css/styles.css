@@ -36,11 +36,12 @@ body {
 }
 
 .wrap {
-  width: 1200px;
+  width: 1250px;
   margin: 0px auto;
 }
 
-.engranaje {
+.engranaje,
+.iconos {
   font-family: WebSymbolsRegular;
 }
 
@@ -112,3 +113,101 @@ body {
   transition: all 200ms;
 }
 
+/*Banner*/
+#banner {
+  width: 95.5%;
+  height: 100px;
+  border: 10px solid white;
+  box-shadow: 0px 0px 2px grey;
+  background: url(../img/bakbaner.png);
+  background-position: -200px -200px;
+  margin: 20px auto;
+}
+
+#banner h1 {
+  display: block;
+  width: 850px;
+  font-family: "BebasNeue";
+  color: white;
+  font-size: 45px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 1px black;
+  margin: 27px auto;
+  /* margin-left: 30%; */
+}
+
+/*Tarjetas*/
+.card {
+  width: 205px;
+  height: 350px;
+  float: left;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 2px #ddd;
+  margin: 20px;
+  margin-top: 40px;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px black;
+}
+
+.card:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.card:last-child {
+  margin-right: 0px;
+}
+
+.card .iconos {
+  display: block;
+  width: 100%;
+  height: 130px;
+  font-size: 50px;
+  line-height: 130px;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.card .category {
+  width: 100%;
+  height: 50px;
+  font-family: "TrebuchetMS";
+  font-size: 21px;
+  font-weight: bold;
+  text-align: center;
+  color: #00538c;
+}
+
+.card .description {
+  text-align: center;
+  color: #00538c;
+  font-family: "TrebuchetMS";
+  font-size: 15px;
+}
+
+/*Barra lateral*/
+#BarraLateral {
+  width: 300px;
+  min-height: 1200px;
+  font-family: "TrebuchetMS";
+  float: right;
+}
+
+aside h3 {
+  display: block;
+  width: auto;
+  height: 45px;
+  line-height: 50px;
+  background: url(../img/pxgray.png), white;
+  box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f,
+    3px 4px 0px #393d3f;
+  font-size: 30px;
+  font-family: "BebasNeue";
+  font-weight: normal;
+  letter-spacing: 2px;
+  padding-left: 15px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
