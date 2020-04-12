@@ -72,12 +72,47 @@ body {
   /* transition: all 300ms; */
 }
 
+#logoTipo:hover {
+  border-radius: 3px;
+  color: black;
+  background-color: #ccc;
+}
+
 #logoTipo .engranaje {
   display: block;
   float: left;
   font-size: 30px;
   margin-top: 8px;
   margin-left: 26px;
+  animation-name: rotate-gear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate-gear {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+#logoTipo:hover .engranaje {
+  animation: fromBelloow 500ms linear;
+}
+
+@keyframes fromBelloow {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 #logoTipo h3 {
@@ -87,6 +122,21 @@ body {
   margin-top: 5px;
   margin-right: 65px;
   /* transition: all 300ms; */
+}
+
+#logoTipo:hover h3 {
+  animation: fromRight 300ms linear;
+}
+
+@keyframes fromRight {
+  from {
+    /* transform: translateX(200%); */
+    transform: translateX(200%);
+  }
+  to {
+    /* transform: translateX(0%); */
+    transform: translateX(0%);
+  }
 }
 
 #menu {
@@ -127,6 +177,17 @@ body {
   background: url(../img/bakbaner.png);
   background-position: -200px -200px;
   margin: 20px auto;
+  overflow: hidden;
+  animation: backBanner 10s linear;
+}
+
+@keyframes backBanner {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -200px -200px;
+  }
 }
 
 #banner h1 {
@@ -140,6 +201,30 @@ body {
   text-shadow: 2px 2px 1px black;
   margin: 27px auto;
   /* margin-left: 30%; */
+  animation: showText 10s linear;
+}
+
+@keyframes showText {
+  0% {
+    transform: translateX(-600%) scale(5, 5);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(600%) scale(5, 5);
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(-600%) scale(5, 5);
+    text-shadow: none;
+    color: transparent;
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%) scale(1, 1);
+    text-shadow: 2px 2px 1px black;
+    color: white;
+    opacity: 1;
+  }
 }
 
 /*Tarjetas*/
@@ -159,6 +244,8 @@ body {
 
 .card:hover {
   transform: scale(1.2, 1.2);
+  background: black;
+  transition: all 300ms;
 }
 
 .card:last-child {
@@ -175,6 +262,22 @@ body {
   margin: 0px auto;
 }
 
+.card:hover .iconos {
+  font-size: 70px;
+  color: #37bcf9;
+  animation: showIcon 300ms linear;
+  transition: all 300ms;
+}
+
+@keyframes showIcon {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
 .card .category {
   width: 100%;
   height: 50px;
@@ -185,11 +288,45 @@ body {
   color: #00538c;
 }
 
+.card:hover .category {
+  color: white;
+  animation: showCategory 400ms linear;
+  transition: all 300ms;
+}
+
+@keyframes showCategory {
+  from {
+    transform: translateY(-300%);
+    color: black;
+  }
+  to {
+    transform: translateY(0%);
+    color: white;
+  }
+}
+
 .card .description {
   text-align: center;
   color: #00538c;
   font-family: "TrebuchetMS";
   font-size: 15px;
+}
+
+.card:hover .description {
+  color: white;
+  animation: showDescription 400ms linear;
+  transition: all 300ms;
+}
+
+@keyframes showDescription {
+  from {
+    transform: translateX(-300%);
+    color: black;
+  }
+  to {
+    transform: translateX(0%);
+    color: white;
+  }
 }
 
 /*Barra lateral*/
@@ -366,6 +503,31 @@ aside h3 {
   margin-bottom: 20px;
 }
 
+#social .overlay {
+  display: block;
+  height: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 1px #ccc;
+  border: 3px solid white;
+  box-shadow: 0px 0px 4px #ccc;
+  background: #f4f7fe;
+  position: absolute;
+  padding: 5px;
+  margin-top: -52px;
+  margin-left: 70px;
+  cursor: pointer;
+  transform: translateX(-80%);
+  opacity: 0;
+}
+
+#social div:hover .overlay {
+  opacity: 1;
+  transform: translate(0%);
+  transition: all 400ms;
+}
+
 /*Articulos*/
 #articles {
   width: 860px;
@@ -447,6 +609,33 @@ aside h3 {
   text-align: center;
 }
 
+#blog:hover {
+  border: 10px solid #37bcf9;
+  border-radius: 240px;
+  box-shadow: 0px 0px 10px gray;
+  background-color: #333;
+  transition: all 1s;
+  animation: blinks 10s infinite linear;
+}
+
+@keyframes blinks {
+  0% {
+    border: 10px solid #37bcf9;
+  }
+  25% {
+    border: 10px solid green;
+  }
+  50% {
+    border: 10px solid yellow;
+  }
+  75% {
+    border: 10px solid white;
+  }
+  100% {
+    border: 10px solid #37bcf9;
+  }
+}
+
 #blog a {
   display: block;
   font-family: "BebasNeue";
@@ -454,6 +643,13 @@ aside h3 {
   letter-spacing: 3px;
   text-decoration: none;
   color: #00538c;
+}
+
+#blog:hover a {
+  color: white;
+  text-shadow: 1px 1px 1px black, 1px 2px 1px black, 1px 3px 1px black,
+    1px 4px 1px black, 1px 5px 1px black, 1px 6px 1px black;
+  transition: all 1s;
 }
 
 /*footer*/
@@ -515,6 +711,13 @@ aside h3 {
   height: 40px;
 }
 
+#footer ul li:hover a {
+  padding-left: 40px;
+  color: white;
+  width: 100%;
+  transition: all 300ms;
+}
+
 #footer #location iframe {
   width: 100%;
   height: 300px;
@@ -528,6 +731,6 @@ aside h3 {
   margin-bottom: 15px;
 }
 
-#footer #info #browers img{
+#footer #info #browers img {
   width: 45px !important;
 }
