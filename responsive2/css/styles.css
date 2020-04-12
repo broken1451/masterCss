@@ -35,6 +35,11 @@ body {
   background-image: url(../img/pattern.png);
 }
 
+.clearfix {
+  float: none;
+  clear: both;
+}
+
 .wrap {
   width: 1250px;
   margin: 0px auto;
@@ -193,6 +198,7 @@ body {
   min-height: 1200px;
   font-family: "TrebuchetMS";
   float: right;
+  margin: 20px;
 }
 
 aside h3 {
@@ -210,4 +216,318 @@ aside h3 {
   padding-left: 15px;
   margin-top: 30px;
   margin-bottom: 15px;
+}
+
+#BarraLateral h3:first-child {
+  margin-top: 0px;
+}
+
+#buscar {
+  width: 90%;
+  height: 30px;
+  margin: 10px auto;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px #ccc inset;
+}
+
+#BarraLateral input[type="text"] {
+  width: 85%;
+  height: 30px;
+  border: none;
+  padding-left: 5px;
+  border-radius: 5px;
+  background: transparent;
+  color: #ccc;
+}
+
+#BarraLateral input[type="text"]:focus {
+  color: #555;
+}
+
+#BarraLateral input[type="button"] {
+  height: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  border-left: 1px solid #ccc;
+  color: #555;
+  padding-left: 6px;
+}
+
+.aside-box {
+  width: 95%;
+  height: 240px;
+  margin: 0px auto;
+  margin-top: 20px;
+  padding-top: 20px;
+  background: white;
+  /* border: 1px solid black; */
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3),
+    0px 1px white inset, 0px -3px 2px rgba(0, 0, 0, 0.3) inset;
+}
+
+#login input[type="email"],
+#login input[type="password"] {
+  display: block;
+  margin: 0px auto;
+  margin-top: 20px;
+  width: 85%;
+  height: 30px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #ccc inset;
+  border-radius: 5px;
+  padding-left: 30px;
+}
+
+#login input[type="email"]:focus,
+#login input[type="password"]:focus {
+  color: #555;
+  box-shadow: 1px 1px 1px gray inset;
+}
+
+#login #user,
+#login #password {
+  text-align: center;
+  display: block;
+  position: absolute;
+  margin-left: 15px;
+  margin-top: 6px;
+  height: 30px;
+}
+
+#login #password {
+  margin-top: 25px;
+  margin-left: 18px;
+  font-size: 20px;
+}
+
+#login input[type="button"],
+#login input[type="submit"],
+#login input[type="reset"],
+#login button {
+  display: block;
+  float: left;
+  text-align: center;
+  width: 100px;
+  height: 35px;
+  margin-top: 20px;
+  color: white;
+  background: linear-gradient(
+    to bottom,
+    #3eb8e5 0%,
+    #2ca0ca 100%
+  ); /*gradiente*/
+  border: 1px solid #156785;
+  border-radius: 0px;
+  cursor: pointer;
+  font-size: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: lighter;
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+
+#login input[type="button"]:hover,
+#login input[type="submit"]:hover,
+#login input[type="reset"]:hover,
+#login button:hover {
+  box-shadow: 0px 0px 3px gray;
+}
+
+#login a {
+  display: block;
+  font-size: 15px;
+  text-decoration: none;
+  margin-left: 18px;
+  color: #555;
+  margin-top: 5px;
+}
+
+#login a:hover {
+  text-decoration: underline;
+  color: #2f78bc;
+}
+
+#social {
+  height: 190px;
+}
+
+#social a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+
+/*Articulos*/
+#articles {
+  width: 860px;
+  float: left;
+}
+
+#articles h2 {
+  display: block;
+  width: 100%;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+  font-family: "BebasNeue";
+  font-size: 40px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  background: url(../img/pxgray.png), white;
+  box-shadow: 0px 1px 0px #393d3f, 1px 2px 0px #393d3f, 2px 3px 0px #393d3f,
+    3px 4px 0px #393d3f;
+  margin: 0px auto;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+#articles article {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  margin: 40px auto;
+  padding: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background: white;
+  color: black;
+  box-shadow: 1px 1px 2px #ddd;
+}
+
+#articles h4 {
+  display: block;
+  font-size: 23px;
+  margin: 3px;
+}
+
+#articles article h4 a {
+  text-decoration: none;
+  color: #00538c;
+}
+
+#articles article h4 a:hover {
+  text-decoration: underline;
+}
+
+#articles .data {
+  float: right;
+  background: #393d3f;
+  color: white;
+  height: 30px;
+  line-height: 30px;
+  margin: -10px;
+  padding: 4px;
+  font-size: 13px;
+  border-radius: 0px 0px 0px 5px;
+}
+
+#articles .data span {
+  margin: 6px;
+}
+
+#articles article p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+#blog {
+  height: 100px;
+  margin-top: 60px;
+  line-height: 100px;
+  text-align: center;
+}
+
+#blog a {
+  display: block;
+  font-family: "BebasNeue";
+  font-size: 40px;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: #00538c;
+}
+
+/*footer*/
+#footer {
+  display: block;
+  width: 100%;
+  height: 470px;
+  background: black;
+  color: white;
+  overflow: hidden;
+}
+
+#footer .wrap > div {
+  display: block;
+  float: left;
+  width: 320px;
+  height: 370px;
+  margin: 40px;
+  text-align: center;
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#footer a {
+  text-decoration: none;
+  color: #37bcf9;
+  /* transition: all 300ms; */
+}
+
+#footer h5 {
+  display: block;
+  background: url(../img/pxgray.png), white;
+  height: 50px;
+  letter-spacing: 2px;
+  text-align: center;
+  font-family: "BebasNeue";
+  font-size: 40px;
+  line-height: 55px;
+  color: black;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+#footer ul {
+  text-align: left;
+  margin: 20px;
+  font-size: 25px;
+}
+
+#footer ul li {
+  margin-top: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+#footer ul li a {
+  display: block;
+  height: 40px;
+}
+
+#footer #location iframe {
+  width: 100%;
+  height: 300px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 5px solid white;
+  box-shadow: 0px 0px 5px gray;
+}
+
+#footer img {
+  margin-bottom: 15px;
+}
+
+#footer #info #browers img{
+  width: 45px !important;
 }
