@@ -228,6 +228,10 @@ body {
 }
 
 /*Tarjetas*/
+#cards{
+  margin-left: 8px;
+}
+
 .card {
   width: 205px;
   height: 350px;
@@ -553,7 +557,7 @@ aside h3 {
 }
 
 #articles article {
-  width: 100%;
+  width: 98%;
   height: auto;
   border: 1px solid #ccc;
   margin: 40px auto;
@@ -732,5 +736,5 @@ aside h3 {
 }
 
 #footer #info #browers img {
-  width: 45px !important;
+  width: 45px;
 }
