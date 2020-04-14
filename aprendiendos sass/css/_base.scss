@@ -66,9 +66,82 @@ p {
 }
 
 .listado {
-  @include crearBordesParametros(red, 25px, yellow);
+  @include crearBordesParametros(red, 25px, black);
 }
 
 .listado2 {
   @include crearBordesParametros(green, 40px, orange);
+}
+
+// herencia
+%alert-normal {
+  border: 1px solid gray;
+  background: #eee;
+  color: black;
+  padding: 10px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.alert {
+  @extend %alert-normal;
+}
+
+.danger {
+  @extend %alert-normal;
+  color: green;
+  border-color: green;
+}
+.exito {
+  @extend %alert-normal;
+  color: red;
+  border-color: red;
+}
+
+// Operadores
+$caja: 200px;
+$ancho: 900px;
+
+h1 {
+  font-size: 20px + 5px -10px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.cajas {
+  width: 900px;
+  margin: 0px auto;
+}
+
+.caja {
+  width: $caja / $ancho * 100%;
+  float: left;
+  margin: 10px;
+}
+
+// Condicionales
+$colorFondo: salmon;
+h1 {
+  // @if $colorFondo != #ccc {
+
+  @if $colorFondo == #ccc {
+    color: black;
+  } @else if $colorFondo==black {
+    color: green;
+  } @else {
+    color: blue;
+  }
+}
+
+// Bucles (for, each y while)
+$contador: 1;
+@for $contador from 1 to 10 {
+  // .listado2 ul li:nth-child(#para pasarlo por parametro{$contador por donde se valla en ciclo}) {
+  .listado2 ul li:nth-child(#{$contador}) {
+    color: orange;
+    // font-size: #{$contador}px
+    font-size: $contador * 3px;
+  }
 }
