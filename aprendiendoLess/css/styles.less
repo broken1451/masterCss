@@ -1,0 +1,77 @@
+// variables
+@bgcolor: lightblue;
+@fuente: Arial;
+@b:body;
+
+
+@{b}{
+    background: @bgcolor;
+}
+
+// lessc --watch styles.lss styles.css
+h1{
+    font-family: @fuente;
+}
+
+
+// Anidacion
+.informacion{
+    ul{
+        li{
+            a{
+                color: green;
+                font-size: 48px;
+            }
+        }
+    }
+}
+
+
+//mixin / funciones
+.sombras(){
+    box-shadow: 0px 0px 10px black;
+    text-shadow: 0px 0px 10px black ;
+}
+
+.sombras1(@size){
+    box-shadow: 0px 0px @size black;
+    text-shadow: 0px 0px @size gray ;
+}
+
+.informacion{
+    // .sombras()
+   .sombras1(20px)
+}
+
+//operadores
+h1{
+    font-size: 30px + 7px;
+}
+
+
+// mixins condicionales
+// funciones  q van a aplicarse cuando se cumple una condicion 
+
+// .textoNegro(@value) when (@value = true) {
+.textoNegro(@value) when (@value = negro) {
+    color: black;
+}
+
+h1{
+    color: blue;
+    .textoNegro(blanco);
+}
+
+// Bucles
+.loop(@contador) when (@contador > 0){
+    .loop(@contador - 1);
+    // height: ((900px / 2 ) * @contador);
+    height: ((900px / @contador));
+}
+
+.informacion{
+    height: 900px;
+    .loop(5);
+}
+
+
