@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+#layout {
+  display: flex; /*es como un float y ocupa el 100%*/
+  /*display: inline-flex;/*Se adapta al contenido que esta dentro el width se convierte en automatico y la caja que tiene display:flex se adpta al contenido que tenga*/
+  /* unset,row, column, column-reverse( los cambia de orden),row-reverse(los mueve a la derecha y los cambia de orden) */
+  /* flex-direction: row;*/
+  flex-wrap: wrap-reverse; /*nowrap(no envuelvas los elementos y que salgan para afuera, wrap(no se salgan fuera y se pongan abajo) */
+
+  /*flex-flow: row wrap; /*flex-flow: direccion tipodewrap; */
+
+  border: 3px solid black;
+  padding: 5px;
+}
+
+.caja {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin: 20px;
+  border: 4px solid #222;
+  margin: 10px;
+  background: gray;
+}
+
+.red {
+  background: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background: green;
+}
+
+.orange {
+  background: orange;
+}
+
+#contenedor {
+  background: #ccc;
+  display: flex;
+  width: 200px;
+  flex-wrap: wrap-reverse; /* Comportamiento por defecto: nowrap */
+  /* flex-flow: row wrap; */
+}
+
+.item {
+  background: #777;
+  width: 50%;
+}
