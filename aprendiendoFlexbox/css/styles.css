@@ -1,6 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  --rojo:red;/*variable en ccs tradicional*/
 }
 
 #layout {
@@ -8,15 +9,21 @@ body {
   /*display: inline-flex;/*Se adapta al contenido que esta dentro el width se convierte en automatico y la caja que tiene display:flex se adpta al contenido que tenga*/
   /* unset,row, column, column-reverse( los cambia de orden),row-reverse(los mueve a la derecha y los cambia de orden) */
   /* flex-direction: row;*/
-  flex-wrap: wrap-reverse; /*nowrap(no envuelvas los elementos y que salgan para afuera, wrap(no se salgan fuera y se pongan abajo) */
-
-  /*flex-flow: row wrap; /*flex-flow: direccion tipodewrap; */
-
+  /* flex-wrap: wrap-reverse; /*nowrap(no envuelvas los elementos y que salgan para afuera, wrap(no se salgan fuera y se pongan abajo) */
+  flex-flow: row wrap; /*flex-flow: direccion tipodewrap; */
+  justify-content: space-evenly;/*Alineacion horizonta;*/
+  height: 600px;
+  align-items:flex-start ;/*alineacion verticalmente*/
   border: 3px solid black;
   padding: 5px;
 }
 
 .caja {
+  /*la propiedad flex-grow: no se puede utilazar en la layout, se usa dentro de las caja o dentro del elemento hijo del container de flex, esto permite adaptar el tamano como a mi me de la gana */
+  /*flex-grow: 1; /*valor 0 es por defecto y no aplica ningun cambio pero para q este adaptable se coloca el valor 1, esta propiedad aumenta el tamano */
+  /* width: 25%; */
+  flex-grow: 1;
+ /* flex-basis: calc( (100% / 3) - 84px); /*dar un tamano base, minnimo hacer como un width: % o px */
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -27,31 +34,37 @@ body {
   background: gray;
 }
 
+/*la propiedad order se le aplica acada elemento, para cambiar el orden*/
 .red {
+  /* order: 4; */
+  /* flex-grow: 7; */
   background: red;
-}
-
-.blue {
-  background-color: blue;
+  /* background: var( --rojo); */
+  align-self:flex-start ;/*alineacion vertical*/
 }
 
 .green {
+  /* order: 1; */
+  /* flex-grow: 7; */
+  /* flex-basis: calc(100% / 3); */
   background: green;
+  /* background: var( --rojo); */
+  align-self: center;
+}
+
+.blue {
+  /* order: 2; */
+  /* flex-grow: 0; */
+ /* flex-shrink: 0;/*Esta propiedad es para reducir el tamano*/
+  background-color: blue;
+  align-self: center;
+  
 }
 
 .orange {
+  /* order: 3; */
+  /* flex-grow: 7; */
+  /* flex-basis: 100%; */
   background: orange;
-}
-
-#contenedor {
-  background: #ccc;
-  display: flex;
-  width: 200px;
-  flex-wrap: wrap-reverse; /* Comportamiento por defecto: nowrap */
-  /* flex-flow: row wrap; */
-}
-
-.item {
-  background: #777;
-  width: 50%;
+  align-self: flex-end;
 }
