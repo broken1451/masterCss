@@ -1,0 +1,61 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+body {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.layout {
+  width: 1200px;
+  margin: 0px auto;
+
+  /*Definnir el contenedor de grid*/
+  display: grid;
+
+  /*Espacios entre elementos grid */
+  grid-gap: 10px;
+
+  /*Colocar elementos uno al lado de otro( grid-template-columns: columnas%  50%;)*/
+    /* grid-template-columns: calc(25% - 10px) calc(25% - 10px) calc(25% - 10px) calc(25% - 10px ); */
+    /* grid-template-columns: 50% 45%; */
+    /* grid-template-columns: repeat(4numero de clolumnas,tamanocolumnas%); */
+    /* grid-template-columns: repeat(4,25%); */
+    /* grid-template-columns: repeat(4,calc(25% - 10px)); */
+    /* grid-template-columns: repeat(2,calc(25% - 10px) 15% 35% ); */
+    /* grid-template-columns: 1fr; medida en fraccion, define una fraccion de las columnas que se definen  */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-columns:repeat(2, 1fr);
+  border: 3px solid orangered;
+  padding: 10px;
+
+}
+
+.layout .caja {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 20px;
+  border: 4px solid #222;
+  /* margin: 10px; */
+  background: gray;
+}
+
+.layout .red {
+  background: red;
+}
+
+.layout .green {
+  background: green;
+}
+
+.layout .blue {
+  background: blue;
+}
+
+.layout .pink {
+  background: pink;
+}
