@@ -9,10 +9,83 @@ body {
   font-family: sans-serif;
 }
 
-.layout {
-  width: 1200px;
+/*------------------------------------- EJERCICIO cOMPLETO------------------------------*/
+#website {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 150px 70px 1fr 70px;
+  width: 75%;
+  height: 1000px; /*altura de navegador*/
   margin: 0px auto;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  /* align-items: center; */
+  /* justify-content: space-around; */
+}
 
+#website #cabecera {
+  display: flex;
+  background: blue;
+  color: white;
+  grid-column: 1 / 6;
+  justify-content: center;
+  align-items: center;
+  /* align-self: center; */
+  /* align-self: center; */
+}
+
+/* 
+#cabecera h1{
+  align-self: center;
+} */
+
+#website #menu {
+  background: lightblue;
+  color: black;
+  grid-column: 1 / 6;
+  height: 70px;
+  line-height: 70px;
+}
+
+#website #menu ul {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  margin: 0px;
+  padding: 0px;
+}
+
+#website #contenido {
+  background: #eee;
+  grid-column: 1 / 5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  padding: 20px;
+}
+
+#website #contenido article {
+  background: #ccc;
+  border: 1px solid #555;
+}
+
+#website #lateral {
+  background: orange;
+  color: white;
+  grid-column: 5 / 6;
+}
+
+#website #footer {
+  background: black;
+  color: white;
+  grid-column: 1 / 6;
+}
+
+/*--------------------------------------EJEMPLOS------------------------------------------*/
+.layout {
+  width: 80%;
+  margin: 0px auto;
+  min-height: 400px;
+  /* min-height: 100vh; */
   /*Definnir el contenedor de grid*/
   display: grid;
 
@@ -20,18 +93,19 @@ body {
   grid-gap: 10px;
 
   /*Colocar elementos uno al lado de otro( grid-template-columns: columnas%  50%;)*/
-    /* grid-template-columns: calc(25% - 10px) calc(25% - 10px) calc(25% - 10px) calc(25% - 10px ); */
-    /* grid-template-columns: 50% 45%; */
-    /* grid-template-columns: repeat(4numero de clolumnas,tamanocolumnas%); */
-    /* grid-template-columns: repeat(4,25%); */
-    /* grid-template-columns: repeat(4,calc(25% - 10px)); */
-    /* grid-template-columns: repeat(2,calc(25% - 10px) 15% 35% ); */
-    /* grid-template-columns: 1fr; medida en fraccion, define una fraccion de las columnas que se definen  */
-    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
-  grid-template-columns:repeat(2, 1fr);
+  /* grid-template-columns: calc(25% - 10px) calc(25% - 10px) calc(25% - 10px) calc(25% - 10px ); */
+  /* grid-template-columns: 50% 45%; */
+  /* grid-template-columns: repeat(4numero de clolumnas,tamanocolumnas%); */
+  /* grid-template-columns: repeat(4,25%); */
+  /* grid-template-columns: repeat(4,calc(25% - 10px)); */
+  /* grid-template-columns: repeat(2,calc(25% - 10px) 15% 35% ); */
+  /* grid-template-columns: 1fr; medida en fraccion, define una fraccion de las columnas que se definen  */
+  /* grid-template-columns: 1fr 1fr 1fr 1fr;*/
+  grid-template-columns: repeat(3, 1fr); /*Definir columnas*/
+  /* grid-template-rows: 1fr 3fr 2fr ; Definir Filas */
+  grid-template-rows: repeat(2, 1fr) 3fr 1fr 1fr; /*Definir Filas*/
   border: 3px solid orangered;
   padding: 10px;
-
 }
 
 .layout .caja {
@@ -45,17 +119,119 @@ body {
 }
 
 .layout .red {
+  /*Expandir columnas*/
+  grid-column-start: 1;
+  grid-column-end: 4;
   background: red;
 }
 
 .layout .green {
+  /*expandir filas*/
+  grid-row-start: 2;
+  grid-row-end: 6;
   background: green;
 }
 
 .layout .blue {
+  grid-column: 2 / 4;
   background: blue;
 }
 
 .layout .pink {
+  grid-column: 2 / 3;
+  grid-row: 3 / 5;
   background: pink;
+}
+
+.layout .orange {
+  grid-row: 3 / 5;
+  background: orange;
+}
+
+.layout .lightblue {
+  /*Expandir columnas*/
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  /* grid-column: inicio / final; */
+  grid-column: 2 / 4;
+  background: lightblue;
+}
+
+/*------------------------------------- EJERCICIO cOMPLETO grid template areas-------------------------*/
+#websiteAreas {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 150px 70px 1fr 70px;
+  grid-template-areas: /*. espacio en blanco*/
+    "cabecera cabecera cabecera cabecera cabecera"
+    "nav nav nav nav nav"
+    "lateral contenido contenido contenido contenido"
+    "lateral pie pie pie pie";
+  grid-gap: 20px;
+  width: 75%;
+  height: 1000px; /*altura de navegador*/
+  margin: 0px auto;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  /* align-items: center; */
+  /* justify-content: space-around; */
+}
+
+#websiteAreas #cabecera {
+  display: flex;
+  grid-area: cabecera;
+  background: blue;
+  color: white;
+
+  justify-content: center;
+  align-items: center;
+  /* align-self: center; */
+  /* align-self: center; */
+}
+
+/* 
+#cabecera h1{
+  align-self: center;
+} */
+
+#websiteAreas #menu {
+  background: lightblue;
+  color: black;
+  height: 70px;
+  line-height: 70px;
+  grid-area: nav;
+}
+
+#websiteAreas #menu ul {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  margin: 0px;
+  padding: 0px;
+}
+
+#websiteAreas #contenido {
+  background: #eee;
+  display: grid;
+  grid-area: contenido;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 25px;
+  padding: 20px;
+}
+
+#websiteAreas #contenido article {
+  background: #ccc;
+  border: 1px solid #555;
+}
+
+#websiteAreas #lateral {
+  background: orange;
+  color: white;
+  grid-area: lateral;
+  padding: 20px;
+}
+
+#websiteAreas #footer {
+  background: black;
+  color: white;
+  grid-area: pie;
 }
