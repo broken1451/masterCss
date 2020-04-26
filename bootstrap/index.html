@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- p-5(padding) border w-75(width) m-auto(margin) border-danger -->
+    <!-- <div class="mi-web p-5 border w-75 m-auto border-danger mt-4">
+        <h1>Aprendiendo bootstrap</h1>
+        <h2>Welcome  las clases con este framework</h2>
+        <button class="btn btn-success" >Hola soy un boton</button>
+    </div> -->
+
+    <div class="container border mt-3">
+    <!-- <div class="container-fluid border mt-3"> -->
+      <div class="row">
+        <header id="header" class="col-12 bg-primary text-white p-2 pl-5">
+          <h1>Aprendiendo bootstrap</h1>
+        </header>
+      </div>
+
+      <div class="row">
+        <nav id="menu" class="col-12 bg-secondary text-white d-block d-none d-sm-none  d-md-block">
+          <ul class="row w-50">
+            <li class="col-xs-12  col-sm-12 col-md"><a href="">Inicio</a></li>
+            <li class="col-xs-12  col-sm-12 col-md"><a href="">Pagina1</a></li>
+            <li class="col-xs-12  col-sm-12 col-md"><a href="">Pagina2</a></li>
+            <li class="col-xs-12  col-sm-12 col-md"><a href="">Pagina3</a></li>
+            <li class="col-xs-12  col-sm-12 col-md"><a href="">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <section id="content" class="row col-12">
+          <!-- col-xs-12 es lo lo mismo q col-12 -->
+          <section id="products" class="col-12 col-sm-12 col-md-9 border">
+            <h2>Productos</h2>
+            <hr />
+
+            <!-- <div class="row items justify-content-center"> -->
+            <div class="items justify-content-center">
+              <div class="row">
+                <div class="item col col-md-12 col-sm-12 col-lg bg-primary ">
+                  Producto 1
+                </div>
+                <div class="item col col-md-6 col-sm-6 col-lg bg-success ">
+                  Producto 2
+                </div>
+                <div class="item col col-md-6 col-sm-6 col-lg bg-danger">
+                  Producto 3
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="item col bg-primary m-2">
+                  Producto 1
+                </div>
+                <div class="item col bg-success m-2">
+                  Producto 2
+                </div>
+                <div class="item col bg-danger m-2">
+                  Producto 3
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="item col bg-primary m-2">
+                  Producto 1
+                </div>
+                <div class="item col bg-success m-2">
+                  Producto 2
+                </div>
+                <div class="item col bg-danger m-2">
+                  Producto 3
+                </div>
+                <div class="item col-4 bg-success m-2">
+                  Producto 4
+                </div>
+              </div>
+
+              <div class="row justify-content-around">
+                <div class="item col-3 bg-primary ">
+                  Producto 1
+                </div>
+                <div class="item col-3 bg-success ">
+                  Producto 2
+                </div>
+                <div class="item col-3 bg-primary ">
+                  Producto 1
+                </div>
+            
+              </div>
+
+              <div class="row">
+                <div class="item col-2 bg-primary offset-1">
+                  Producto 1
+                </div>
+                <div class="item col-2 bg-success offset-1">
+                  Producto 2
+                </div>
+                <div class="item col-2 bg-danger offset-1 ">
+                  Producto 3
+                </div>
+                <div class="item col-2 bg-success offset-1">
+                  Producto 4
+                </div>
+              </div>
+
+            </div>
+          </section>
+          <aside class="col-3 border d-block d-none d-sm-none d-md-block">
+            <h2>Barra lateral</h2>
+            <div class="row lateral  bg-light align-items-center">
+              <div class="col-4 bg-primary align-self-start">
+                elemnto 1
+              </div>
+
+              <div class="col-4 bg-success align-self-center">
+                elemnto 2
+              </div>
+              <div class="col-4 bg-warning align-self-end ">
+                elemnto 3
+              </div>
+
+              <div class="col-4 bg-primary order-3">
+                elemnto 4
+              </div>
+
+              <div class="col-4 bg-success order-1 ">
+                elemnto 5
+              </div>
+              <div class="col-4 bg-warning order-2">
+                elemnto 6
+              </div>
+            </div>
+          </aside>
+        </section>
+
+        <footer id="footer" class="col-12 bg-info">
+          Master en css en udemy &copy;
+        </footer>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="css/bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

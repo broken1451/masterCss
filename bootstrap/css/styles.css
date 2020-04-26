@@ -1,0 +1,48 @@
+#menu  {
+  height: 50px;
+}
+
+#menu ul {
+  text-decoration: none;
+  list-style: none;
+  line-height: 40px;
+}
+
+.item{
+    height: 150px;
+}
+
+#footer{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.lateral{
+  height: 250px;
+}
+
+.lateral > div{
+  height: calc(250px / 3);
+  /* height: 50px; */
+}
+
+@media(max-width:768px){
+  #menu  {
+    height: auto;
+  }
+}
+@media(max-width:991px){
+  #menu  {
+    height: auto;
+  }
+}
+
+.eslider{
+  height:450px ;
+  overflow: hidden;
+}
+.eslider img{
+  height:450px ;
+  overflow: hidden;
+}
